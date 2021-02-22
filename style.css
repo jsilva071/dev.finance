@@ -108,6 +108,20 @@ header {
   text-align: center;
 }
 
+.logout {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+}
+
+.logout a {
+  font-size: 1.2rem;
+}
+
+.logout a > * {
+  margin: 0 0.5rem;
+}
+
 /* Balance */
 #balance {
   margin-top: -8rem;
@@ -238,6 +252,22 @@ td.expense {
 
   position: relative;
   z-index: 1;
+
+  animation-name: modalAnimation;
+  animation-duration: 0.3s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes modalAnimation {
+  0% {
+    opacity: 0;
+    top: -1000px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
 }
 
 /* Form */
@@ -270,6 +300,10 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#loginModal .input-group.actions {
+  justify-content: center;
 }
 
 .input-group.actions .button,

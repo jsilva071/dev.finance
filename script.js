@@ -1,6 +1,6 @@
 const Modal = {
-  toggle() {
-    document.querySelector(".modal-overlay").classList.toggle("active");
+  toggle(modalId) {
+    document.getElementById(modalId).classList.toggle("active");
   }
 }
 
@@ -170,7 +170,7 @@ const Form = {
       const transaction = Form.formatValues();
       Transaction.add(transaction);
       Form.clearFields();
-      Modal.toggle();
+      Modal.toggle("transactionModal");
     } catch (error) {
       alert(error.message);
     }
